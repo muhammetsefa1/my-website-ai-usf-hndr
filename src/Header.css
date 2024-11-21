@@ -1,0 +1,53 @@
+/* Header'ın genel stil ayarları */
+header {
+    background-color: #282c34; /* Header arka plan rengi */
+    color: white; /* Yazı rengi */
+    padding: 20px 20px; /* İç boşluklar */
+    display: flex; /* Flexbox düzeni */
+    justify-content: space-between; /* Sol ve sağ öğeler arasındaki boşluğu eşit dağıtıyoruz */
+    align-items: center; /* Dikeyde ortalama */
+    width: 100%; /* Tam genişlik */
+    position: fixed; /* Sayfa kaydırıldığında sabit tutma */
+    top: 0; /* Üst kısmına hizalama */
+    left: 0; /* Sol kısmına hizalama */
+    z-index: 1000; /* Diğer öğelerin üstünde görünmesi için */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+    
+  }
+  
+  /* Başlık stil ayarları */
+  header h1 {
+    margin: 0; /* Başlık etrafındaki boşluğu kaldırıyoruz */
+    font-size: 24px; /* Başlık boyutu */
+    flex: 1; /* Başlık sol tarafa dayanacak şekilde esnek alan alıyor */
+  }
+  
+  /* Menü stil ayarları */
+  nav {
+    display: flex; /* Menü öğelerini yatayda sıralıyoruz */
+  }
+  
+  nav ul {
+    display: flex; /* Menü öğelerini yatayda sıralıyoruz */
+    list-style-type: none; /* Liste işaretini kaldırıyoruz */
+    margin: 0; /* Margin sıfırlama */
+    padding: 0; /* Padding sıfırlama */
+  }
+  
+  /* Menü öğeleri */
+  nav ul li {
+    margin-left: 30px; /* Menü öğeleri arasına boşluk ekliyoruz */
+  }
+  
+  /* Bağlantıların stil ayarları */
+  nav ul li a {
+    color: white; /* Bağlantı rengi */
+    text-decoration: none; /* Alt çizgiyi kaldırıyoruz */
+    font-size: 18px; /* Bağlantı metni boyutu */
+    transition: color 0.3s ease; /* Renk geçiş efekti */
+  }
+  
+  nav ul li a:hover {
+    color: #61dafb; /* Hover durumunda mavi renk */
+  }
+  
