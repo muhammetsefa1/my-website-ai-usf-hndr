@@ -16,9 +16,10 @@ const Sidebar = () => {
                 {extended}
                 <div className="recent">
                     <p className="recent-title">Recent</p>
-                    <div className="recent-entry"></div>
+                    <div className="recent-entry">
                         <img src={assets.message_icon} alt="" />
-                        <p>What is react ...</p>
+                        <div><p>What is react ...</p></div>
+                    </div>
                 </div>
             </div>
             <div className="bottom">
