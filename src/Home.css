@@ -1,0 +1,32 @@
+/* Sayfanın genel arka planı */
+body {
+    margin: 0;
+    background-color: black; /* Sayfanın arka planı siyah */
+    color: white; /* Varsayılan metin rengi */
+  }
+  
+  /* Resim için özel stil */
+  .image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Tam ekran yüksekliği */
+   
+  }
+  
+  .image-container img {
+    width: 500px; /* Resmin genişliği */
+    height: 400px; /* Oranlı yükseklik */
+    border-radius: 20px; /* Köşeleri yuvarlama */
+    object-fit: cover; /* Resmin boyutlandırmasını düzenle */
+    
+    /* Kenar geçişi için maskeleme */
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 100%);
+    
+    /* Görselin kenarlarını transparan yapmak için */
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 10%, black 100%);
+    
+  }
+  
