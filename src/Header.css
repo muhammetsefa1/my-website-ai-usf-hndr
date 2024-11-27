@@ -1,4 +1,3 @@
-
 /* Header'ın genel stil ayarları */
 header {
   background-color: #000000; /* Header arka plan rengi */
@@ -13,7 +12,6 @@ header {
   left: 0; /* Sol kısmına hizalama */
   z-index: 1000; /* Diğer öğelerin üstünde görünmesi için */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
-  
 }
 
 /* Başlık stil ayarları */
@@ -27,5 +25,3 @@ header h1 {
   right: 10px;
 }
 /* Menü stil ayarları */
-
-
