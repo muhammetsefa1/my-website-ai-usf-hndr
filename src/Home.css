@@ -5,8 +5,7 @@ body {
   height: 100vh; /* Ekranı tamamen kaplasın */
   margin: 0;
   display: flex;
-  justify-content: center; /* İçeriği yatayda merkeze alır */
-  align-items: center; /* İçeriği dikeyde merkeze alır */
+  
 }
 
 /* Resim için özel stil */
@@ -20,8 +19,11 @@ body {
 }
 
 .image-container img {
-  width: 500px; /* Resmin genişliği */
-  height: 400px; /* Oranlı yükseklik */
+  position: absolute;
+  top: 800px; /* Üstten 50px mesafede */
+  left: 900px; /* Soldan 20px mesafede */
+  width: 500px;
+  height: 400px;
   object-fit: cover; /* Resmin boyutlandırmasını düzenle */
   -webkit-mask-image: radial-gradient(ellipse 50% 55%, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%);
   background: radial-gradient(circle, rgba(0, 0, 0, 0) 10%, black 100%);
@@ -29,26 +31,27 @@ body {
 
 /* Yazı için stil */
 .intro-container {
-  position: absolute;
-  left: 20px; /* Sol kenardan 20px mesafede */
-  top: 60%; /* Sayfanın ortasına doğru yerleştir */
-  transform: translateY(-50%); /* Dikeyde tam ortalama */
+  position: relative; /* Konumlandırmayı içeren konteyner */
   color: white;
-  text-align: left; /* Metni sola hizala */
-  z-index: 2; /* Resimle çakışmayı önler */
 }
 
 .intro-title {
+  position: absolute;
+  top: 100px; /* Sayfanın üstünden 10% kadar uzaklık */
+  left: 450px; /* Sol kenara 20px uzaklık */
+  width: 500px;
   font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 20px;
-  background: linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(to right, #ff6a00, #d313d6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .intro-text {
+  position: absolute;
+  width: 500px;
+  top: 500px; /* Sayfanın üstünden 40% kadar uzaklık */
+  left: center; /* Sol kenara 20px uzaklık */
   font-size: 1.5rem;
-  line-height: 1.6;
   color: #dddddd;
 }

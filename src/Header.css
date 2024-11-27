@@ -1,9 +1,8 @@
-
 /* Header'ın genel stil ayarları */
 header {
-  background-color: #000000; /* Header arka plan rengi */
-  color: white; /* Yazı rengi */  
-  padding: 20px 20px; /* İç boşluklar */
+  background-color: #000; /* Header arka plan rengi */
+  color: white; /* Yazı rengi */
+  padding: 20px; /* İç boşluklar */
   display: flex; /* Flexbox düzeni */
   justify-content: space-between; /* Sol ve sağ öğeler arasındaki boşluğu eşit dağıtıyoruz */
   align-items: center; /* Dikeyde ortalama */
@@ -13,19 +12,33 @@ header {
   left: 0; /* Sol kısmına hizalama */
   z-index: 1000; /* Diğer öğelerin üstünde görünmesi için */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
-  
+  font-size: 18px; /* Başlık boyutu */
+}
+.intro-head {
+  font-size: 3rem;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, rgb(0, 153, 255), rgb(57, 255, 20)); /* Mavi ve Neon Yeşil */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Başlık stil ayarları */
-header h1 {
-  margin: 0; /* Başlık etrafındaki boşluğu kaldırıyoruz */
-  font-size: 24px; /* Başlık boyutu */
-  flex: 1; /* Başlık sol tarafa dayanacak şekilde esnek alan alıyor */
-}
-.Page-name{
-  left: 10px;
-  right: 10px;
-}
-/* Menü stil ayarları */
 
+/* Link stil ayarları */
+nav {
+  display: flex;
+  gap: 20px; /* Linkler arasına boşluk ekliyoruz */
+}
 
+nav a {
+  color: white; /* Link rengi beyaz */
+  text-decoration: none; /* Alt çizgiyi kaldırıyoruz */
+  padding: 10px 15px; /* İç boşluk */
+  transition: background-color 0.3s, color 0.3s; /* Hover animasyonu */
+}
+
+nav a:hover {
+  background-color: #ee0979; /* Hover durumunda arka plan rengi */
+  color: #000; /* Yazı rengi değişir */
+}

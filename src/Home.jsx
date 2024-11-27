@@ -9,9 +9,8 @@ const Home = () => {
       <div className="intro-container">
         <h1 className="intro-title">Welcome to My Website</h1>
         <p className="intro-text">
-          Discover amazing content and features tailored just for you.
+          Discover amazing content and features tailored just for you. Explore our services and learn more about what we offer.
         </p>
-        <p className="intro-text">Explore our services and learn more about what we offer.</p>
       </div>
       <div className="image-container">
         <img src={myImage} alt="Blended Effect" />
