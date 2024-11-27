@@ -4,12 +4,12 @@ import './Header.css'; // Header stil dosyasını import ediyoruz
 
 const Header = () => {
   return (
-    <header style={{padding: '20px 30px', textAlign: 'flex' }}>
-      <h1>USF AI CLUB</h1>
-        <nav>
-          <Link to="/" style={{ color: '#fff', margin: '0 15px' }}>Home</Link>
-          <Link to="/about" style={{ color: '#fff', margin: '0 15px' }}>About</Link>
-        </nav>
+    <header>
+      <h1 className="Page-name">Welcome to My Website</h1>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+      </nav>
     </header>
   );
 };

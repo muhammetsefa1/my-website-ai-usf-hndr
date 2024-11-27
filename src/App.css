@@ -11,28 +11,10 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url('./assets/images/AI.jpg') no-repeat center center;
-    background-size: cover;
-    border-radius: 20px; /* Köşeleri yuvarlatıyoruz */
-    overflow: hidden; /* Resmin dışındaki alanın görünmesini engelliyoruz */
+    
   }
   
   /* Geçiş efekti ekliyoruz */
-  .container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      to center, 
-      rgba(0, 0, 0, 0.7), 
-      rgba(0, 0, 0, 0) 50%, 
-      rgba(0, 0, 0, 0.7)
-    );
-    border-radius: 20px; /* Aynı yuvarlatılmış köşe efekti */
-    pointer-events: none; /* Geçişin üstünde tıklanmasını engeller */
-    transition: background 0.5s ease; /* Geçişi daha yumuşak hale getiriyoruz */
-  }
+ 
+  
   

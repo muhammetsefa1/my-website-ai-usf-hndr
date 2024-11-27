@@ -1,32 +1,54 @@
 /* Sayfanın genel arka planı */
 body {
-    margin: 0;
-    background-color: black; /* Sayfanın arka planı siyah */
-    color: white; /* Varsayılan metin rengi */
-  }
-  
-  /* Resim için özel stil */
-  .image-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Tam ekran yüksekliği */
-   
-  }
-  
-  .image-container img {
-    width: 500px; /* Resmin genişliği */
-    height: 400px; /* Oranlı yükseklik */
-    border-radius: 20px; /* Köşeleri yuvarlama */
-    object-fit: cover; /* Resmin boyutlandırmasını düzenle */
-    
-    /* Kenar geçişi için maskeleme */
-    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 100%);
-    
-    /* Görselin kenarlarını transparan yapmak için */
-    background: radial-gradient(circle, rgba(0, 0, 0, 0) 10%, black 100%);
-    
-  }
-  
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ekranı tamamen kaplasın */
+  margin: 0;
+  display: flex;
+  justify-content: center; /* İçeriği yatayda merkeze alır */
+  align-items: center; /* İçeriği dikeyde merkeze alır */
+}
+
+/* Resim için özel stil */
+.image-container {
+  display: flex;
+  justify-content: flex-start; /* Resmi sola hizala */
+  align-items: flex-end; /* Resmi dikeyde ortala */
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
+
+.image-container img {
+  width: 500px; /* Resmin genişliği */
+  height: 400px; /* Oranlı yükseklik */
+  object-fit: cover; /* Resmin boyutlandırmasını düzenle */
+  -webkit-mask-image: radial-gradient(ellipse 50% 55%, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 10%, black 100%);
+}
+
+/* Yazı için stil */
+.intro-container {
+  position: absolute;
+  left: 20px; /* Sol kenardan 20px mesafede */
+  top: 60%; /* Sayfanın ortasına doğru yerleştir */
+  transform: translateY(-50%); /* Dikeyde tam ortalama */
+  color: white;
+  text-align: left; /* Metni sola hizala */
+  z-index: 2; /* Resimle çakışmayı önler */
+}
+
+.intro-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-text {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #dddddd;
+}

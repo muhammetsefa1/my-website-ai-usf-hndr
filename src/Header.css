@@ -1,7 +1,8 @@
+
 /* Header'ın genel stil ayarları */
 header {
-  background-color: black; /* Header arka plan rengi */
-  color: none; /* Yazı rengi */
+  background-color: #000000; /* Header arka plan rengi */
+  color: white; /* Yazı rengi */  
   padding: 20px 20px; /* İç boşluklar */
   display: flex; /* Flexbox düzeni */
   justify-content: space-between; /* Sol ve sağ öğeler arasındaki boşluğu eşit dağıtıyoruz */
@@ -21,32 +22,10 @@ header h1 {
   font-size: 24px; /* Başlık boyutu */
   flex: 1; /* Başlık sol tarafa dayanacak şekilde esnek alan alıyor */
 }
-
+.Page-name{
+  left: 10px;
+  right: 10px;
+}
 /* Menü stil ayarları */
-nav {
-  display: flex; /* Menü öğelerini yatayda sıralıyoruz */
-}
 
-nav ul {
-  display: flex; /* Menü öğelerini yatayda sıralıyoruz */
-  list-style-type: none; /* Liste işaretini kaldırıyoruz */
-  margin: 0; /* Margin sıfırlama */
-  padding: 0; /* Padding sıfırlama */
-}
 
-/* Menü öğeleri */
-nav ul li {
-  margin-left: 30px; /* Menü öğeleri arasına boşluk ekliyoruz */
-}
-
-/* Bağlantıların stil ayarları */
-nav ul li a {
-  color: white; /* Bağlantı rengi */
-  text-decoration: none; /* Alt çizgiyi kaldırıyoruz */
-  font-size: 18px; /* Bağlantı metni boyutu */
-  transition: color 0.3s ease; /* Renk geçiş efekti */
-}
-
-nav ul li a:hover {
-  color: none#61dafb; /* Hover durumunda mavi renk */
-}
