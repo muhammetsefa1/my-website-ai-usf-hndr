@@ -3,9 +3,19 @@ body {
   position: relative;
   width: 100%;
   height: 100vh; /* Ekranı tamamen kaplasın */
-  margin: 0;
   display: flex;
+  flex-direction: column;
   
+}
+
+.background {
+  position: relative;
+  width: 100%; /* Sayfanın yatay genişliğini kaplar */
+  height: 100vh; /* Görünüm penceresi kadar yükseklik */
+  background-image: url('./assets/images/Background.jpg'); /* Resim yolu */
+  background-size: cover; /* Resmi ekranı kaplayacak şekilde ölçeklendirir */
+  background-position: center; /* Resmi ortalar */
+  background-repeat: no-repeat; /* Tekrar etmez */
 }
 
 /* Resim için özel stil */
@@ -42,7 +52,7 @@ body {
   width: 500px;
   font-size: 3rem;
   font-weight: bold;
-  background: linear-gradient(to right, #ff6a00, #d313d6);
+  background: linear-gradient(to right, #ffffff, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

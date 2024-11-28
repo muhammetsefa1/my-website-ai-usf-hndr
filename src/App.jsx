@@ -9,7 +9,8 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <div style={{ paddingTop: '60px', paddingBottom: '50px', paddingLeft: '20px', paddingRight: '20px' }}>
+      {/* Padding yerine genel bir className ya da düzenleme yapılabilir */}
+      <div className="app-container">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

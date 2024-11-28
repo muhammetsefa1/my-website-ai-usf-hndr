@@ -1,6 +1,6 @@
 /* Header'ın genel stil ayarları */
 header {
-  background-color: #000; /* Header arka plan rengi */
+   /* Header arka plan rengi */
   color: white; /* Yazı rengi */
   padding: 20px; /* İç boşluklar */
   display: flex; /* Flexbox düzeni */
@@ -11,15 +11,16 @@ header {
   top: 0; /* Üst kısmına hizalama */
   left: 0; /* Sol kısmına hizalama */
   z-index: 1000; /* Diğer öğelerin üstünde görünmesi için */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+   /* Hafif gölge efekti */
   font-size: 18px; /* Başlık boyutu */
 }
+
 .intro-head {
   font-size: 3rem;
   font-weight: bold;
   font-size: 30px;
-  margin-bottom: 20px;
-  background: linear-gradient(to right, rgb(0, 153, 255), rgb(57, 255, 20)); /* Mavi ve Neon Yeşil */
+  
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255)); /* Mavi ve Neon Yeşil */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -35,10 +36,7 @@ nav a {
   color: white; /* Link rengi beyaz */
   text-decoration: none; /* Alt çizgiyi kaldırıyoruz */
   padding: 10px 15px; /* İç boşluk */
-  transition: background-color 0.3s, color 0.3s; /* Hover animasyonu */
+   /* Hover animasyonu */
 }
 
-nav a:hover {
-  background-color: #ee0979; /* Hover durumunda arka plan rengi */
-  color: #000; /* Yazı rengi değişir */
-}
+

@@ -5,7 +5,7 @@ import './Header.css'; // Header stil dosyasını import ediyoruz
 const Header = () => {
   return (
     <header>
-      <h1 className="intro-head">Welcome to My Website</h1>
+      <h1 className="intro-head">USF AI CLUB</h1>
       <nav>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
