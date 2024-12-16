@@ -81,7 +81,14 @@ body {
   gap: 500px; /* fotoğraflar arası boşluk */
   margin-top: 550px; /* alt kısınmda biraz boşluk bıırak*/
   padding: 20px; /* üst, alt, sağ ve sol boşluk */
+  flex-wrap: wrap; /* Satır bittiğinde alt satıra geçer */
  }
+
+ /* Her profil için düzen */
+ .profile{
+  text-align: center;
+ }
+
 
  /* her bir profil fotoğrafı */
  .profile-photo {
@@ -89,4 +96,19 @@ width: 100px; /*fotoğraf genişliği */
 height: 100px; /*fotoğraf yüksekliği */
 border-radius: 50%; /* yuvarlak hale getirme */
 object-fit: cover; /* fotoğrafın içeriğini düzgün kes */
+margin-bottom: 10px;
  }
+/* İsimler */
+.profile-name{
+  font-size: 1rem;
+font-weight: bold;
+color: white;
+margin: 5px 0;
+}
+
+/* Çalışma alanı */
+.profile-role{
+  font-size: 0.9rem;
+  color: white;
+}
+
