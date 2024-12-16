@@ -11,20 +11,33 @@ const Home = () => {
         <div className="intro-container">
           <h1 className="intro-title">Welcome to My Website</h1>
           <h2 className="eklenen-yazı">Merhaba benim adım mustafa</h2>
-          <p className="intro-text"></p>
         </div>
         <div className="image-container">
           <img src={myImage} alt="AI Visual" />
         </div>
       </div>
 
-  {/*profil fotoğrafı bölümü*/}
-  <div className="profile-container">
-    <img src={profile1} alt="Profile 1" className="profile-photo"/>
-    <img src={profile2} alt="Profile 2" className="profile-photo"/>
-    <img src={profile3} alt="Profile 3" className="profile-photo"/>
-  </div>
-</div>
+      {/* Profil fotoğraflarının altına isim ve çalışma alanı eklemek */}
+      <div className="profile-container">
+        <div className="profile">
+          <img src={profile1} alt="Profile 1" className="profile-photo" />
+          <h3 className="profile-name">Mustafa Hündür</h3>
+          <p className="profile-role">Web Developer</p>
+        </div>
+
+        <div className="profile">
+          <img src={profile2} alt="Profile 2" className="profile-photo" />
+          <h3 className="profile-name">Muhammet Hündür</h3>
+          <p className="profile-role">Project Manager</p>
+        </div>
+
+        <div className="profile">
+          <img src={profile3} alt="Profile 3" className="profile-photo" />
+          <h3 className="profile-name">Yunus Hündür</h3>
+          <p className="profile-role">Boş İşler Uzmanı</p>
+        </div>
+      </div>
+    </div>
   );
 };
 
