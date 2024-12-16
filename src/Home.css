@@ -30,13 +30,13 @@ body {
 
 .image-container img {
   position: absolute;
-  top: 800px; /* Üstten 50px mesafede */
-  left: 900px; /* Soldan 20px mesafede */
+  top: 831px; /* Üstten 50px mesafede */
+  left: 1100px; /* Soldan 20px mesafede */
   width: 500px;
   height: 400px;
   object-fit: cover; /* Resmin boyutlandırmasını düzenle */
   -webkit-mask-image: radial-gradient(ellipse 50% 55%, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%);
-  background: radial-gradient(circle, rgba(0, 0, 0, 0) 10%, black 100%);
+  background: radial-gradient(circle, rgba(54, 36, 36, 0) 10%, black 100%);
 }
 
 /* Yazı için stil */
@@ -65,3 +65,28 @@ body {
   font-size: 1.5rem;
   color: #dddddd;
 }
+.eklenen-yazı {
+  position: absolute;
+  width: 900px;
+  top: 900px;
+  left: 300px;
+  font-size: 1,5rem;
+  color: #dddddd;
+ }
+ /*profil fotoğrafları için container */ 
+ .profile-container {
+  display: flex;
+  justify-content: center; /* fotoğrafları yatayda ortala */
+  align-items: center;
+  gap: 500px; /* fotoğraflar arası boşluk */
+  margin-top: 550px; /* alt kısınmda biraz boşluk bıırak*/
+  padding: 20px; /* üst, alt, sağ ve sol boşluk */
+ }
+
+ /* her bir profil fotoğrafı */
+ .profile-photo {
+width: 100px; /*fotoğraf genişliği */
+height: 100px; /*fotoğraf yüksekliği */
+border-radius: 50%; /* yuvarlak hale getirme */
+object-fit: cover; /* fotoğrafın içeriğini düzgün kes */
+ }
