@@ -66,11 +66,22 @@ body {
   font-size: 1.5rem;
   color: #dddddd;
 }
+.gray-section2 {
+  background-color: #b2a6a64e; /* Gri renk */
+  position: absolute; /* Konumu tam kontrol etmek için */
+  bottom: 25%; /* Sayfanın üstünden 500px aşağıdan başlar */
+  height: 500px; /* 800px - 500px = 300px yüksekliği kaplar */
+  width: 100%; /* Sayfanın genişliğini tam kaplar */
+  text-align: center; /* İçerikleri ortala */
+  display: flex;
+  align-items: center; /* Dikey hizalama */
+  justify-content: center; /* Yatay hizalama */
+}
 .gray-section {
-  background-color: #f0f0f0; /* Gri renk */
+  background-color: #f0f0f05a; /* Gri renk */
   position: absolute; /* Konumu tam kontrol etmek için */
   bottom: 0px; /* Sayfanın üstünden 500px aşağıdan başlar */
-  height: 300px; /* 800px - 500px = 300px yüksekliği kaplar */
+  height: 80px; /* 800px - 500px = 300px yüksekliği kaplar */
   width: 100%; /* Sayfanın genişliğini tam kaplar */
   text-align: center; /* İçerikleri ortala */
   display: flex;
@@ -91,46 +102,58 @@ body {
   display: flex;
   justify-content: center; /* fotoğrafları yatayda ortala */
   align-items: center;
-  gap: 500px; /* fotoğraflar arası boşluk */
-  margin-top: 1200px; /* alt kısınmda biraz boşluk bıırak*/
-  padding: 20px; /* üst, alt, sağ ve sol boşluk */
+  gap: 300px; /* fotoğraflar arası boşluk */
+  margin-top: 80%; /* üst boşluk */
+  padding: 0px; /* üst, alt, sağ ve sol boşluk */
   flex-wrap: wrap; /* Satır bittiğinde alt satıra geçer */
- }
+}
 
- /* Her profil için düzen */
- .profile{
+/* Her profil için düzen */
+.profile {
   text-align: center;
- }
+  margin-bottom: 20px; /* profiller arasında boşluk */
+}
 
-
- /* her bir profil fotoğrafı */
- .profile-photo {
-  width: 100px; /*fotoğraf genişliği */
-  height: 100px; /*fotoğraf yüksekliği */
-  border-radius: 50%; /* yuvarlak hale getirme */
-  object-fit: cover; /* fotoğrafın içeriğini düzgün kes */
+/* Her bir profil fotoğrafı */
+.profile-photo {
+  width: 120px; /* Fotoğraf genişliği */
+  height: 120px; /* Fotoğraf yüksekliği */
+  border-radius: 50%; /* Yuvarlak hale getirme */
+  object-fit: cover; /* Fotoğrafın içeriğini düzgün kes */
   margin-bottom: 10px;
- }
+}
+
 /* İsimler */
-  .profile-name{
-  font-size: 1rem;
+.profile-name {
+  font-size: 1.2rem; /* Yazı boyutu */
   font-weight: bold;
   color: white;
   margin: 5px 0;
-  }
+}
 
 /* Çalışma alanı */
-.profile-role{
-  font-size: 0.9rem;
-  color: white;
+.profile-role {
+  font-size: 1rem; /* Yazı boyutu */
+  color: #ccc; /* Daha açık bir beyaz tonu */
 }
+/* Linklerin rengini ve altını çizgiyi kaldır */
+.profile-name a {
+  color: white; /* Adınızın rengi */
+  text-decoration: none; /* Altı çizgiyi kaldırır */
+}
+
+/* Linkin üstüne gelinceki (hover) durum */
+.profile-name a:hover {
+  color: lightgray; /* Üzerine gelince rengini değiştir */
+}
+
 
 .social-container {
   position: absolute;
   bottom: 20px; /* Sayfanın altından 20px yukarıda */
-  left: 20px;   /* Sayfanın solundan 20px uzaklıkta */
+  left: 43%;   /* Sayfanın solundan 20px uzaklıkta */
   display: flex; /* Logoları yan yana dizmek için flexbox kullanıyoruz */
-  gap: 20px; /* Logolar arasındaki boşluk */
+  gap: 30px; /* Logolar arasındaki boşluk */
   
 }
 

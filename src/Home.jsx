@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css';
 import instagramLogo from './assets/images/instagram-logo.png';
 import twitterLogo from './assets/images/twitter-logo.png';
+import emailLogo from './assets/images/email-logo.png';
 import myImage from './assets/images/AI.jpg';
 import profile1 from './assets/images/profile1.jpg'; //profil fotoğraflarını import edin
 import profile2 from './assets/images/profile2.jpg'
@@ -18,10 +19,11 @@ const Home = () => {
           <img src={myImage} alt="AI Visual" />
         </div>
       </div>
-      <div class="gray-section">
+      <div class="gray-section2">
         <h2>AI Club Innovations</h2>
-        <p>This section highlights AI club's activities and achievements.</p>
       </div>
+      
+      <div class="gray-section"></div>
       <div className="social-container">
         <a href="https://www.instagram.com/taic.usf/" target="_blank" rel="noopener noreferrer">
           <img src={instagramLogo} alt="Instagram Logo" className="social-logo" />
@@ -29,28 +31,56 @@ const Home = () => {
         <a href="https://twitter.com/yourclubusername" target="_blank" rel="noopener noreferrer">
           <img src={twitterLogo} alt="Twitter Logo" className="social-logo" />
         </a>
+        <a href="mailto:sefahundur1@gmail.com" target="_blank" rel="noopener noreferrer">
+          <img src={emailLogo} alt="Email" className="social-logo" />
+        </a>
       </div>
 
       {/* Profil fotoğraflarının altına isim ve çalışma alanı eklemek */}
       <div className="profile-container">
         <div className="profile">
           <img src={profile1} alt="Profile 1" className="profile-photo" />
-          <h3 className="profile-name">Mustafa Hündür</h3>
+          <h3 className="profile-name">
+            <a 
+              href="https://www.linkedin.com/in/mustafahundur" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Mustafa Hündür
+            </a>
+          </h3>
           <p className="profile-role">Web Developer</p>
         </div>
 
         <div className="profile">
           <img src={profile2} alt="Profile 2" className="profile-photo" />
-          <h3 className="profile-name">Muhammet Hündür</h3>
+          <h3 className="profile-name">
+            <a 
+              href="https://www.linkedin.com/in/muhammet-sefa-hundur/?locale=en_US" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Muhammet Hundur
+            </a>
+          </h3>
           <p className="profile-role">Project Manager</p>
         </div>
 
         <div className="profile">
           <img src={profile3} alt="Profile 3" className="profile-photo" />
-          <h3 className="profile-name">Yunus Hündür</h3>
+          <h3 className="profile-name">
+            <a 
+              href="https://www.linkedin.com/in/yunushundur" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Yunus Hündür
+            </a>
+          </h3>
           <p className="profile-role">Boş İşler Uzmanı</p>
         </div>
       </div>
+
     </div>
   );
 };
