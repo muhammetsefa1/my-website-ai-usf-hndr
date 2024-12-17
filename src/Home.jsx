@@ -1,5 +1,7 @@
 import React from 'react';
 import './Home.css';
+import instagramLogo from './assets/images/instagram-logo.png';
+import twitterLogo from './assets/images/twitter-logo.png';
 import myImage from './assets/images/AI.jpg';
 import profile1 from './assets/images/profile1.jpg'; //profil fotoğraflarını import edin
 import profile2 from './assets/images/profile2.jpg'
@@ -15,6 +17,18 @@ const Home = () => {
         <div className="image-container">
           <img src={myImage} alt="AI Visual" />
         </div>
+      </div>
+      <div class="gray-section">
+        <h2>AI Club Innovations</h2>
+        <p>This section highlights AI club's activities and achievements.</p>
+      </div>
+      <div className="social-container">
+        <a href="https://www.instagram.com/taic.usf/" target="_blank" rel="noopener noreferrer">
+          <img src={instagramLogo} alt="Instagram Logo" className="social-logo" />
+        </a>
+        <a href="https://twitter.com/yourclubusername" target="_blank" rel="noopener noreferrer">
+          <img src={twitterLogo} alt="Twitter Logo" className="social-logo" />
+        </a>
       </div>
 
       {/* Profil fotoğraflarının altına isim ve çalışma alanı eklemek */}
