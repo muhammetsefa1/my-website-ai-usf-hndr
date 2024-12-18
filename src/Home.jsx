@@ -38,48 +38,46 @@ const Home = () => {
 
       {/* Profil fotoğraflarının altına isim ve çalışma alanı eklemek */}
       <div className="profile-container">
-        <div className="profile">
-          <img src={profile1} alt="Profile 1" className="profile-photo" />
-          <h3 className="profile-name">
-            <a 
-              href="https://www.linkedin.com/in/mustafahundur" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              Mustafa Hündür
-            </a>
-          </h3>
-          <p className="profile-role">Web Developer</p>
-        </div>
+        <a
+          href="https://www.linkedin.com/in/mustafa-hundur"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="profile-link"
+        >
+          <div className="profile">
+            <img src={profile1} alt="Profile 1" className="profile-photo" />
+            <h3 className="profile-name">Mustafa Hündür</h3>
+            <p className="profile-role">Web Developer</p>
+          </div>
+        </a>
 
-        <div className="profile">
-          <img src={profile2} alt="Profile 2" className="profile-photo" />
-          <h3 className="profile-name">
-            <a 
-              href="https://www.linkedin.com/in/muhammet-sefa-hundur/?locale=en_US" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              Muhammet Hundur
-            </a>
-          </h3>
-          <p className="profile-role">Project Manager</p>
-        </div>
+        <a
+          href="https://www.linkedin.com/in/muhammet-hundur"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="profile-link"
+        >
+          <div className="profile">
+            <img src={profile2} alt="Profile 2" className="profile-photo" />
+            <h3 className="profile-name">Muhammet Hündür</h3>
+            <p className="profile-role">Project Manager</p>
+          </div>
+        </a>
 
-        <div className="profile">
-          <img src={profile3} alt="Profile 3" className="profile-photo" />
-          <h3 className="profile-name">
-            <a 
-              href="https://www.linkedin.com/in/yunushundur" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              Yunus Hündür
-            </a>
-          </h3>
-          <p className="profile-role">Boş İşler Uzmanı</p>
-        </div>
+        <a
+          href="https://www.linkedin.com/in/yunus-hundur"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="profile-link"
+        >
+          <div className="profile">
+            <img src={profile3} alt="Profile 3" className="profile-photo" />
+            <h3 className="profile-name">Yunus Hündür</h3>
+            <p className="profile-role">Boş İşler Uzmanı</p>
+          </div>
+        </a>
       </div>
+
 
     </div>
   );

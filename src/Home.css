@@ -30,8 +30,8 @@ body {
 
 .image-container img {
   position: absolute;
-  top: 831px; /* Üstten 50px mesafede */
-  left: 1000px; /* Soldan 20px mesafede */
+  top: 800px; /* Üstten 50px mesafede */
+  left: 60%; /* Soldan 20px mesafede */
   width: 500px;
   height: 400px;
   object-fit: cover; /* Resmin boyutlandırmasını düzenle */
@@ -100,18 +100,25 @@ body {
  /*profil fotoğrafları için container */ 
  .profile-container {
   display: flex;
-  justify-content: center; /* fotoğrafları yatayda ortala */
+  justify-content: center; /* Fotoğrafları yatayda ortala */
   align-items: center;
-  gap: 300px; /* fotoğraflar arası boşluk */
-  margin-top: 80%; /* üst boşluk */
-  padding: 0px; /* üst, alt, sağ ve sol boşluk */
+  gap: 300px; /* Fotoğraflar arası boşluk */
+  margin-top: 80%; /* Üst boşluk */
+  padding: 0px; /* Üst, alt, sağ ve sol boşluk */
   flex-wrap: wrap; /* Satır bittiğinde alt satıra geçer */
+}
+
+/* Tüm profil bloğunu tıklanabilir hale getirme */
+.profile-link {
+  text-decoration: none; /* Altı çizgiyi kaldır */
+  color: inherit; /* Varsayılan renkleri kullan */
+  display: inline-block; /* Tıklanabilir alan için kutu */
 }
 
 /* Her profil için düzen */
 .profile {
   text-align: center;
-  margin-bottom: 20px; /* profiller arasında boşluk */
+  margin-bottom: 20px; /* Profiller arasında boşluk */
 }
 
 /* Her bir profil fotoğrafı */
@@ -121,6 +128,12 @@ body {
   border-radius: 50%; /* Yuvarlak hale getirme */
   object-fit: cover; /* Fotoğrafın içeriğini düzgün kes */
   margin-bottom: 10px;
+  transition: transform 0.3s ease; /* Hover animasyonu */
+}
+
+/* Hover efekti: Fotoğraf büyütme */
+.profile-link:hover .profile-photo {
+  transform: scale(1.1); /* Fotoğrafı büyüt */
 }
 
 /* İsimler */
@@ -129,24 +142,21 @@ body {
   font-weight: bold;
   color: white;
   margin: 5px 0;
+  transition: color 0.3s ease; /* Renk değişimi */
 }
 
 /* Çalışma alanı */
 .profile-role {
   font-size: 1rem; /* Yazı boyutu */
   color: #ccc; /* Daha açık bir beyaz tonu */
-}
-/* Linklerin rengini ve altını çizgiyi kaldır */
-.profile-name a {
-  color: white; /* Adınızın rengi */
-  text-decoration: none; /* Altı çizgiyi kaldırır */
+  transition: color 0.3s ease; /* Renk değişimi */
 }
 
-/* Linkin üstüne gelinceki (hover) durum */
-.profile-name a:hover {
-  color: lightgray; /* Üzerine gelince rengini değiştir */
+/* Hover efekti: Yazı rengini değiştir */
+.profile-link:hover .profile-name,
+.profile-link:hover .profile-role {
+  color: lightgray; /* Hover sırasında metin rengini değiştir */
 }
-
 
 .social-container {
   position: absolute;
