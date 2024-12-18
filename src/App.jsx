@@ -12,7 +12,7 @@ const App = () => {
       {/* Padding yerine genel bir className ya da düzenleme yapılabilir */}
       <div className="app-container">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/my-website-ai-usf-hndr" element={<Home />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </div>
