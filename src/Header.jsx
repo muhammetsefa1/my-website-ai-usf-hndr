@@ -7,7 +7,7 @@ const Header = () => {
     <header>
       <h1 className="intro-head">USF AI CLUB</h1>
       <nav>
-        <Link to="/">Home</Link>
+        <Link to="/my-website-ai-usf-hndr">Home</Link>
         <Link to="/about">About</Link>
       </nav>
     </header>
