@@ -10,16 +10,16 @@ import profile3 from './assets/images/profile3.jpg'
 const Home = () => {
   return (
     <div>
-      <div className="background">
+      <div className="background" id="about-section">
         <div className="intro-container">
           <h1 className="intro-title">Welcome to My Website</h1>
-          <h2 className="eklenen-yazı">Merhaba benim adım mustafa</h2>
         </div>
         <div className="image-container">
           <img src={myImage} alt="AI Visual" />
         </div>
       </div>
-      <div class="gray-section2">
+
+      <div className="gray-section2" id="events-section">
         <h2>AI Club Innovations</h2>
       </div>
       
@@ -37,7 +37,7 @@ const Home = () => {
       </div>
 
       {/* Profil fotoğraflarının altına isim ve çalışma alanı eklemek */}
-      <div className="profile-container">
+      <div className="profile-container" id="profile-section">
         <a
           href="https://www.linkedin.com/in/mustafa-hundur"
           target="_blank"
@@ -77,6 +77,9 @@ const Home = () => {
           </div>
         </a>
       </div>
+      <div>
+      
+    </div>
 
 
     </div>

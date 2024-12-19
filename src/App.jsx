@@ -5,6 +5,7 @@ import About from './About';
 import Home from './Home';
 import './App.css';
 
+
 const App = () => {
   return (
     <Router>
@@ -13,7 +14,6 @@ const App = () => {
       <div className="app-container">
         <Routes>
           <Route path="/my-website-ai-usf-hndr" element={<Home />} />
-          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </Router>

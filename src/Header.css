@@ -1,42 +1,35 @@
-/* Header'ın genel stil ayarları */
-header {
-   /* Header arka plan rengi */
+/* Header genel ayarları */
+.header {
+  position: fixed; /* Ekranın üst kısmında sabit durmasını sağlar */
+  top: 0;
+  width: 100%; /* Tüm genişliği kaplar */
+  background-color: #333; /* Arka plan rengi */
+  padding: 10px 20px; /* İç boşluk */
+  z-index: 1000; /* Üstte görünmesi için yüksek z-index değeri */
+}
+
+/* Navigation listesi */
+.nav-list {
+  display: flex; /* Listeyi yan yana yerleştirir */
+  justify-content: flex-end; /* Sağ tarafa hizalar */
+  list-style: none; /* Nokta ya da numara görünmez */
+  margin: 0; /* Dış boşluk sıfır */
+  padding: 0; /* İç boşluk sıfır */
+}
+
+/* Navigation linkleri */
+.nav-list li {
+  margin-left: 20px; /* Linkler arasına boşluk */
+}
+
+.nav-list a {
   color: white; /* Yazı rengi */
-  padding: 20px; /* İç boşluklar */
-  display: flex; /* Flexbox düzeni */
-  justify-content: space-between; /* Sol ve sağ öğeler arasındaki boşluğu eşit dağıtıyoruz */
-  align-items: center; /* Dikeyde ortalama */
-  width: 100%; /* Tam genişlik */
-  position: fixed; /* Sayfa kaydırıldığında sabit tutma */
-  top: 0; /* Üst kısmına hizalama */
-  left: 0; /* Sol kısmına hizalama */
-  z-index: 1000; /* Diğer öğelerin üstünde görünmesi için */
-   /* Hafif gölge efekti */
-  font-size: 18px; /* Başlık boyutu */
+  text-decoration: none; /* Alt çizgi kaldırılır */
+  font-size: 1.2rem; /* Yazı boyutu */
+  font-weight: bold; /* Kalın yazı */
+  transition: color 0.3s ease; /* Renk değişiminde geçiş animasyonu */
 }
 
-.intro-head {
-  font-size: 3rem;
-  font-weight: bold;
-  font-size: 30px;
-  
-  background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255)); /* Mavi ve Neon Yeşil */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.nav-list a:hover {
+  color: lightgray; /* Üzerine gelindiğinde renk değişir */
 }
-
-
-/* Link stil ayarları */
-nav {
-  display: flex;
-  gap: 20px; /* Linkler arasına boşluk ekliyoruz */
-}
-
-nav a {
-  color: white; /* Link rengi beyaz */
-  text-decoration: none; /* Alt çizgiyi kaldırıyoruz */
-  padding: 10px 15px; /* İç boşluk */
-   /* Hover animasyonu */
-}
-
-

@@ -1,14 +1,40 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Header.css'; // Header stil dosyasını import ediyoruz
+import { Link } from 'react-scroll';
+import './Header.css';
 
 const Header = () => {
   return (
-    <header>
-      <h1 className="intro-head">USF AI CLUB</h1>
+    <header className="header">
       <nav>
-        <Link to="/my-website-ai-usf-hndr">Home</Link>
-        <Link to="/about">About</Link>
+        <ul className="nav-list">
+          <li>
+            <Link
+              to="about-section" // Target id
+              smooth={true}
+              duration={300} // Yumuşak kaydırma süresi (ms)
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="events-section" // Target id
+              smooth={true}
+              duration={300}
+            >
+              Events
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="profile-section" // Target id
+              smooth={true}
+              duration={300} // Yumuşak kaydırma süresi (ms)
+            >
+              Profile
+            </Link>
+          </li>
+        </ul>
       </nav>
     </header>
   );
