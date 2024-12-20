@@ -72,8 +72,8 @@ const Home = () => {
         >
           <div className="profile">
             <img src={profile3} alt="Profile 3" className="profile-photo" />
-            <h3 className="profile-name">Yunus Hündür</h3>
-            <p className="profile-role">Boş İşler Uzmanı</p>
+            <h3 className="profile-name">Lokman Bekit</h3>
+            <p className="profile-role">USA President</p>
           </div>
         </a>
       </div>
