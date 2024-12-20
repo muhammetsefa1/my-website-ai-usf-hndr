@@ -3,8 +3,8 @@
   position: fixed; /* Ekranın üst kısmında sabit durmasını sağlar */
   top: 0;
   width: 100%; /* Tüm genişliği kaplar */
-  background-color: #333; /* Arka plan rengi */
-  padding: 10px 20px; /* İç boşluk */
+  background-color: rgba(0, 0, 0, 0.7); /* Beyaz ve %70 opaklık */ /* Arka plan rengi */
+  padding: 20px 40px; /* İç boşluk */
   z-index: 1000; /* Üstte görünmesi için yüksek z-index değeri */
 }
 
@@ -17,9 +17,14 @@
   padding: 0; /* İç boşluk sıfır */
 }
 
+.nav-list li {
+  font-family: 'Poppins', sans-serif; /* Font burada uygulanıyor */
+  font-size: 18px;
+  font-weight: 100; /* Daha kalın bir yazı için */
+}
 /* Navigation linkleri */
 .nav-list li {
-  margin-left: 20px; /* Linkler arasına boşluk */
+  margin-left: 30px; /* Linkler arasına boşluk */
 }
 
 .nav-list a {
@@ -30,6 +35,14 @@
   transition: color 0.3s ease; /* Renk değişiminde geçiş animasyonu */
 }
 
-.nav-list a:hover {
-  color: lightgray; /* Üzerine gelindiğinde renk değişir */
+
+.nav-list li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease; /* Hover efekti için */
+  cursor: pointer; /* İmleci ok işaretine çevirir */
+}
+
+.nav-list li a:hover {
+  color: #ff4081; /* Hover sırasında renk değişir */
 }
