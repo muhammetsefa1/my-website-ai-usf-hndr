@@ -52,7 +52,7 @@ const Home = () => {
         </a>
 
         <a
-          href="https://www.linkedin.com/in/muhammet-hundur"
+          href="https://www.linkedin.com/in/muhammet-sefa-hundur-82095b332/?locale=en_US"
           target="_blank"
           rel="noopener noreferrer"
           className="profile-link"
@@ -65,7 +65,7 @@ const Home = () => {
         </a>
 
         <a
-          href="https://www.linkedin.com/in/yunus-hundur"
+          href="https://www.linkedin.com/in/lokman-bekit-aa2ba421b/?trk=public_profile_browsemap"
           target="_blank"
           rel="noopener noreferrer"
           className="profile-link"
@@ -73,10 +73,23 @@ const Home = () => {
           <div className="profile">
             <img src={profile3} alt="Profile 3" className="profile-photo" />
             <h3 className="profile-name">Lokman Bekit</h3>
-            <p className="profile-role">USA President</p>
+            <p className="profile-role">President</p>
           </div>
         </a>
       </div>
+      <div className="form-link-container">
+        <h2>Join Our Club</h2>
+        <p>Fill out our membership form by clicking the button below:</p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScsJCBN1UTnn8phNAKUq5BENVj76xVgUOk7zM0bPpSgz4HjHA/viewform?usp=dialog" // Google Form linkini buraya ekleyin
+          target="_blank"
+          rel="noopener noreferrer"
+          className="form-button"
+        >
+          Fill Out the Form
+        </a>
+      </div>
+
       <div>
       
     </div>
