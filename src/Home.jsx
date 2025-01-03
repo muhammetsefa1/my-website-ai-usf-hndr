@@ -12,10 +12,14 @@ const Home = () => {
     <div>
       <div className="background" id="about-section">
         <div className="intro-container">
-          <h1 className="intro-title">Welcome to My Website</h1>
+          <h1 className="intro-title"></h1>
         </div>
         <div className="image-container">
-          <img src={myImage} alt="AI Visual" />
+          <div class="text-content">
+            <h2>Başlik</h2>
+            <p>Bu, fotoğrafın sol tarafında duran bir metin örneğidir.</p>
+          </div>
+          <img src={myImage} alt="AI Visual" class="photo"/>
         </div>
       </div>
 
@@ -52,7 +56,7 @@ const Home = () => {
         </a>
 
         <a
-          href="https://www.linkedin.com/in/muhammet-sefa-hundur-82095b332/?locale=en_US"
+          href="https://www.linkedin.com/in/muhammet-sefa-hundur/?locale=en_US"
           target="_blank"
           rel="noopener noreferrer"
           className="profile-link"
@@ -76,6 +80,67 @@ const Home = () => {
             <p className="profile-role">President</p>
           </div>
         </a>
+        <a
+          href="https://www.linkedin.com/in/lokman-bekit-aa2ba421b/?trk=public_profile_browsemap"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="profile-link"
+        >
+          <div className="profile">
+            <img src={profile3} alt="Profile 3" className="profile-photo" />
+            <h3 className="profile-name">Lokman Bekit</h3>
+            <p className="profile-role">President</p>
+          </div>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/lokman-bekit-aa2ba421b/?trk=public_profile_browsemap"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="profile-link"
+        >
+          <div className="profile">
+            <img src={profile3} alt="Profile 3" className="profile-photo" />
+            <h3 className="profile-name">Lokman Bekit</h3>
+            <p className="profile-role">President</p>
+          </div>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/lokman-bekit-aa2ba421b/?trk=public_profile_browsemap"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="profile-link"
+        >
+          <div className="profile">
+            <img src={profile3} alt="Profile 3" className="profile-photo" />
+            <h3 className="profile-name">Lokman Bekit</h3>
+            <p className="profile-role">President</p>
+          </div>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/lokman-bekit-aa2ba421b/?trk=public_profile_browsemap"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="profile-link"
+        >
+          <div className="profile">
+            <img src={profile3} alt="Profile 3" className="profile-photo" />
+            <h3 className="profile-name">Lokman Bekit</h3>
+            <p className="profile-role">President</p>
+          </div>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/lokman-bekit-aa2ba421b/?trk=public_profile_browsemap"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="profile-link"
+        >
+          <div className="profile">
+            <img src={profile3} alt="Profile 3" className="profile-photo" />
+            <h3 className="profile-name">Lokman Bekit</h3>
+            <p className="profile-role">President</p>
+          </div>
+        </a>
+        
       </div>
       <div className="form-link-container">
         <h2>Join Our Club</h2>

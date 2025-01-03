@@ -3,10 +3,31 @@
   position: fixed; /* Ekranın üst kısmında sabit durmasını sağlar */
   top: 0;
   width: 100%; /* Tüm genişliği kaplar */
-  background-color: rgba(0, 0, 0, 0.7); /* Beyaz ve %70 opaklık */ /* Arka plan rengi */
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.3); /* Arka plan rengi */
   padding: 20px 40px; /* İç boşluk */
+  display: flex; /* Flexbox düzeni */
+  align-items: center; /* Dikeyde ortala */
+  justify-content: space-between; /* Sol ve sağa yay */
   z-index: 1000; /* Üstte görünmesi için yüksek z-index değeri */
 }
+
+/* Logo container */
+.logo-container {
+  display: flex; /* Logo için bir container */
+  align-items: center;
+}
+
+.logo {
+  width: 60px; /* Logonun genişliğini ayarlayın */
+  height: ; /* Yükseklik otomatik olarak oranı korur */
+  transition: transform 0.3s ease; /* Hover animasyonu için */
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Hover durumunda logoyu %10 büyüt */
+}
+
 
 /* Navigation listesi */
 .nav-list {
@@ -21,12 +42,10 @@
   font-family: 'Poppins', sans-serif; /* Font burada uygulanıyor */
   font-size: 18px;
   font-weight: 100; /* Daha kalın bir yazı için */
-}
-/* Navigation linkleri */
-.nav-list li {
   margin-left: 30px; /* Linkler arasına boşluk */
 }
 
+/* Navigation linkleri */
 .nav-list a {
   color: white; /* Yazı rengi */
   text-decoration: none; /* Alt çizgi kaldırılır */
@@ -35,14 +54,6 @@
   transition: color 0.3s ease; /* Renk değişiminde geçiş animasyonu */
 }
 
-
-.nav-list li a {
-  text-decoration: none;
-  color: #ffffff;
-  transition: color 0.3s ease; /* Hover efekti için */
-  cursor: pointer; /* İmleci ok işaretine çevirir */
-}
-
-.nav-list li a:hover {
+.nav-list a:hover {
   color: #ff4081; /* Hover sırasında renk değişir */
 }

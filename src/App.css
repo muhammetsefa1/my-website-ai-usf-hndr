@@ -2,7 +2,7 @@
 body {
     
     padding: 0;
-    height: 350vh;
+    height: 370vh;
     background: #000000; /* Sayfanın arka planını siyah yapıyoruz */
   }
   
@@ -17,7 +17,17 @@ body {
     scroll-behavior: smooth;
   }
   
+  @media (max-width: 768px) {
+    .body {
+      height: 650vh;
+    }
+  }
   
+  @media (max-width: 480px) {
+    .body {
+      height: 650vh;
+    }
+  }
   /* Geçiş efekti ekliyoruz */
  
   

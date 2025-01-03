@@ -7,6 +7,29 @@ body {
   flex-direction: column;
   
 }
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.image-container img {
+  animation: fadeIn 2s ease-in;
+}
 
 .background {
   position: relative;
@@ -14,9 +37,11 @@ body {
   height: 100vh; /* Görünüm penceresi kadar yükseklik */
   background-image: url('./assets/images/Background.jpg'); /* Resim yolu */
   background-size: cover; /* Resmi ekranı kaplayacak şekilde ölçeklendirir */
+  animation: scaleUp 1s ease-in-out;
   background-position: center; /* Resmi ortalar */
   background-repeat: no-repeat; /* Tekrar etmez */
 }
+
 
 /* Resim için özel stil */
 .image-container {
@@ -29,43 +54,21 @@ body {
 }
 
 .image-container img {
-  position: absolute;
-  top: 800px; /* Üstten 50px mesafede */
-  left: 60%; /* Soldan 20px mesafede */
+  display: grid; /* Grid sistemi aktif et */
+  grid-template-columns: 1fr 1fr; /* 2 sütunlu yapı: Metin ve Fotoğraf */
+  align-items: center; /* Dikeyde ortala */
+  margin-top: 60%; /* Üst boşluk */
+  margin-left: 60%; /* Soldan 20px mesafede */
   width: 500px;
   height: 400px;
   object-fit: cover; /* Resmin boyutlandırmasını düzenle */
   -webkit-mask-image: radial-gradient(ellipse 50% 55%, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%);
   background: radial-gradient(circle, rgba(54, 36, 36, 0) 10%, black 100%);
 }
-
-/* Yazı için stil */
-.intro-container {
-  position: relative; /* Konumlandırmayı içeren konteyner */
-  color: white;
+.text-content {
+  text-align: left; /* Metni sola hizala */
 }
 
-.intro-title {
-  position: absolute;
-  top: 200px; /* Sayfanın üstünden 10% kadar uzaklık */
-  left: 50%; /* Sol kenara 20px uzaklık */
-  transform: translate(-50%, -50%); /* Tam ortalamak için düzeltme */
-  width: 500px;
-  font-size: 3rem;
-  font-weight: bold;
-  background: linear-gradient(to right, #ffffff, #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.intro-text {
-  position: absolute;
-  width: 500px;
-  top: 500px; /* Sayfanın üstünden 40% kadar uzaklık */
-  left: center; /* Sol kenara 20px uzaklık */
-  font-size: 1.5rem;
-  color: #dddddd;
-}
 .gray-section2 {
   background-color: #b2a6a64e; /* Gri renk */
   position: absolute; /* Konumu tam kontrol etmek için */
@@ -99,11 +102,14 @@ body {
  }
  /*profil fotoğrafları için container */ 
  .profile-container {
-  display: flex;
+  display: grid; /* Grid kullanımı */
+  grid-template-columns: repeat(4, 1fr); /* Sabit 4 sütun */
   justify-content: center; /* Fotoğrafları yatayda ortala */
   align-items: center;
-  gap: 300px; /* Fotoğraflar arası boşluk */
+  gap: 10%; /* Fotoğraflar arası boşluk */
   margin-top: 80%; /* Üst boşluk */
+  margin-left: 100px;
+  margin-right: 100px;
   padding: 0px; /* Üst, alt, sağ ve sol boşluk */
   flex-wrap: wrap; /* Satır bittiğinde alt satıra geçer */
 }
@@ -134,6 +140,7 @@ body {
 /* Hover efekti: Fotoğraf büyütme */
 .profile-link:hover .profile-photo {
   transform: scale(1.1); /* Fotoğrafı büyüt */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Gölge efekti */
 }
 
 /* İsimler */
@@ -158,13 +165,36 @@ body {
   color: lightgray; /* Hover sırasında metin rengini değiştir */
 }
 
+/* Sayfa küçüldüğünde düzen bozulmasın */
+@media (max-width: 768px) {
+  .profile-container {
+    grid-template-columns: repeat(2, 1fr);  /* Küçük ekranlarda 2 sütun */
+  }
+  .profile-photo {
+    width: 80px; /* Fotoğraf genişliği */
+    height: 80px; /* Fotoğraf yüksekliği */
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    grid-template-columns: 1fr; /* Daha küçük ekranlarda 1 sütun */
+  }
+  .profile-photo {
+    width: 50px; /* Fotoğraf genişliği */
+    height: 50px; /* Fotoğraf yüksekliği */
+  }
+}
 .social-container {
+  display: grid;
+  grid-auto-flow: column; /* Logoları yatay sıraya diz */
+  justify-content: center; /* Yatayda ortala */
+  align-items: center; /* Dikeyde ortala */
   position: absolute;
-  bottom: 20px; /* Sayfanın altından 20px yukarıda */
-  left: 43%;   /* Sayfanın solundan 20px uzaklıkta */
-  display: flex; /* Logoları yan yana dizmek için flexbox kullanıyoruz */
-  gap: 30px; /* Logolar arasındaki boşluk */
-  
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 30px;
 }
 
 .social-logo {
@@ -208,9 +238,6 @@ body {
   font-weight: bold;
 }
 
-.form-button:hover {
-  background-color: #0056b3;
-}
 
 
 
