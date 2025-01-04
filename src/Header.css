@@ -4,7 +4,7 @@
   top: 0;
   width: 100%; /* Tüm genişliği kaplar */
   height: 70px;
-  background-color: rgba(0, 0, 0, 0.3); /* Arka plan rengi */
+  background-color: rgba(0, 0, 0, 0); /* Arka plan rengi */
   padding: 20px 40px; /* İç boşluk */
   display: flex; /* Flexbox düzeni */
   align-items: center; /* Dikeyde ortala */
@@ -20,7 +20,7 @@
 
 .logo {
   width: 60px; /* Logonun genişliğini ayarlayın */
-  height: ; /* Yükseklik otomatik olarak oranı korur */
+  height: auto; /* Yükseklik otomatik olarak oranı korur */
   transition: transform 0.3s ease; /* Hover animasyonu için */
 }
 
@@ -49,11 +49,32 @@
 .nav-list a {
   color: white; /* Yazı rengi */
   text-decoration: none; /* Alt çizgi kaldırılır */
-  font-size: 1.2rem; /* Yazı boyutu */
+     /* Yazı boyutu */
   font-weight: bold; /* Kalın yazı */
   transition: color 0.3s ease; /* Renk değişiminde geçiş animasyonu */
 }
 
 .nav-list a:hover {
   color: #ff4081; /* Hover sırasında renk değişir */
+}
+@media (max-width: 768px) {
+  .header {
+    position: fixed; /* Ekranın üst kısmında sabit durmasını sağlar */
+    height: 70px;
+    padding: 20px 40px; /* İç boşluk */
+    display: flex; /* Flexbox düzeni */
+  }
+  .nav-list li {
+    font-size: 14px;
+    font-weight: 80; /* Daha kalın bir yazı için */
+    margin-left: 30px; /* Linkler arasına boşluk */
+  }
+  .logo {
+    width: 40px; /* Logonun genişliğini ayarlayın */
+    
+  }
+}
+
+@media (max-width: 480px) {
+  
 }

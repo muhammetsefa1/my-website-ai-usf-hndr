@@ -34,8 +34,7 @@ body {
 .background {
   position: relative;
   width: 100%; /* Sayfanın yatay genişliğini kaplar */
-  height: 100vh; /* Görünüm penceresi kadar yükseklik */
-  background-image: url('./assets/images/Background.jpg'); /* Resim yolu */
+  height: 100vh; /* Görünüm penceresi kadar yükseklik */ /* Resim yolu */
   background-size: cover; /* Resmi ekranı kaplayacak şekilde ölçeklendirir */
   animation: scaleUp 1s ease-in-out;
   background-position: center; /* Resmi ortalar */
@@ -46,32 +45,35 @@ body {
 /* Resim için özel stil */
 .image-container {
   display: flex;
-  justify-content: flex-start; /* Resmi sola hizala */
-  align-items: flex-end; /* Resmi dikeyde ortala */
-  position: relative;
+  grid-template-columns: repeat(2, 1fr); /* İki sütun: Metin ve resim */
+  justify-content: center;  /* İçerikleri yatayda hizala */
+  align-items: center; /* İçerikleri dikeyde hizala */
+  margin-top: 10%;
+  margin-bottom: 10%;
   max-width: 100%;
-  height: auto;
+  flex-wrap: wrap;
+  gap: 10%; /* Metin ve resim arasındaki boşluk */
+  padding: 0px; /* İçerik etrafında boşluk */
 }
 
-.image-container img {
-  display: grid; /* Grid sistemi aktif et */
-  grid-template-columns: 1fr 1fr; /* 2 sütunlu yapı: Metin ve Fotoğraf */
-  align-items: center; /* Dikeyde ortala */
-  margin-top: 60%; /* Üst boşluk */
-  margin-left: 60%; /* Soldan 20px mesafede */
+.photo { /* Üst boşluk */
   width: 500px;
   height: 400px;
   object-fit: cover; /* Resmin boyutlandırmasını düzenle */
   -webkit-mask-image: radial-gradient(ellipse 50% 55%, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%);
   background: radial-gradient(circle, rgba(54, 36, 36, 0) 10%, black 100%);
 }
+
 .text-content {
   text-align: left; /* Metni sola hizala */
+  font-size: 18px;
+  color: white;
+  max-width: 40%;
 }
 
 .gray-section2 {
   background-color: #b2a6a64e; /* Gri renk */
-  position: absolute; /* Konumu tam kontrol etmek için */
+  position: flex; /* Konumu tam kontrol etmek için */
   bottom: 25%; /* Sayfanın üstünden 500px aşağıdan başlar */
   height: 500px; /* 800px - 500px = 300px yüksekliği kaplar */
   width: 100%; /* Sayfanın genişliğini tam kaplar */
@@ -82,7 +84,7 @@ body {
 }
 .gray-section {
   background-color: #f0f0f05a; /* Gri renk */
-  position: absolute; /* Konumu tam kontrol etmek için */
+  position: flex; /* Konumu tam kontrol etmek için */
   bottom: 0px; /* Sayfanın üstünden 500px aşağıdan başlar */
   height: 80px; /* 800px - 500px = 300px yüksekliği kaplar */
   width: 100%; /* Sayfanın genişliğini tam kaplar */
@@ -129,8 +131,8 @@ body {
 
 /* Her bir profil fotoğrafı */
 .profile-photo {
-  width: 120px; /* Fotoğraf genişliği */
-  height: 120px; /* Fotoğraf yüksekliği */
+  width: 100px; /* Fotoğraf genişliği */
+  height: 100px; /* Fotoğraf yüksekliği */
   border-radius: 50%; /* Yuvarlak hale getirme */
   object-fit: cover; /* Fotoğrafın içeriğini düzgün kes */
   margin-bottom: 10px;
@@ -165,36 +167,16 @@ body {
   color: lightgray; /* Hover sırasında metin rengini değiştir */
 }
 
-/* Sayfa küçüldüğünde düzen bozulmasın */
-@media (max-width: 768px) {
-  .profile-container {
-    grid-template-columns: repeat(2, 1fr);  /* Küçük ekranlarda 2 sütun */
-  }
-  .profile-photo {
-    width: 80px; /* Fotoğraf genişliği */
-    height: 80px; /* Fotoğraf yüksekliği */
-  }
-}
 
-@media (max-width: 480px) {
-  .profile-container {
-    grid-template-columns: 1fr; /* Daha küçük ekranlarda 1 sütun */
-  }
-  .profile-photo {
-    width: 50px; /* Fotoğraf genişliği */
-    height: 50px; /* Fotoğraf yüksekliği */
-  }
-}
 .social-container {
   display: grid;
   grid-auto-flow: column; /* Logoları yatay sıraya diz */
   justify-content: center; /* Yatayda ortala */
   align-items: center; /* Dikeyde ortala */
-  position: absolute;
+  position: flex;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  gap: 30px;
+  transform: translateX(-0%);
+  gap: 40px;
 }
 
 .social-logo {
@@ -238,6 +220,50 @@ body {
   font-weight: bold;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .photo { /* Üst boşluk */
+    width: 400px;
+    height: 350px;
+    object-fit: cover; /* Resmin boyutlandırmasını düzenle */
+    -webkit-mask-image: radial-gradient(ellipse 50% 55%, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%);
+    background: radial-gradient(circle, rgba(54, 36, 36, 0) 10%, black 100%);
+  }
+}
 
+/* Sayfa küçüldüğünde düzen bozulmasın */
+@media (max-width: 768px) {
+  .profile-container {
+    grid-template-columns: repeat(2, 1fr);  /* Küçük ekranlarda 2 sütun */
+  }
+  .profile-photo {
+    width: 80px; /* Fotoğraf genişliği */
+    height: 80px; /* Fotoğraf yüksekliği */
+  }
+  image-container {
+    grid-template-columns: repeat(1,1fr);
+    flex-direction: column; /* İçerikleri dikey hizala */
+    gap: 20px; /* Metin ve resim arasındaki boşluğu küçült */
+  }
+  .text-content {
+    /* Metin ile resim arasına boşluk ekle */
+  }
+
+  .photo {
+    margin: 0 auto; /* Resmi ortala */
+    width: 300px;
+    height: 250px;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    grid-template-columns: 1fr; /* Daha küçük ekranlarda 1 sütun */
+  }
+  .profile-photo {
+    width: 50px; /* Fotoğraf genişliği */
+    height: 50px; /* Fotoğraf yüksekliği */
+  }
+}
 
 
