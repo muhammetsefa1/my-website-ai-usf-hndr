@@ -8,6 +8,9 @@ import Background from './assets/images/Background.jpg';
 import profile1 from './assets/images/profile1.jpg'; //profil fotoğraflarını import edin
 import profile2 from './assets/images/profile2.jpg'
 import profile3 from './assets/images/profile3.jpg'
+import Anil from './assets/images/Anil.jpg'
+import Harun from './assets/images/Harun.jpg'
+import Yasin from './assets/images/Yasin.jpg'
 const Home = () => {
   return (
     <div>
@@ -17,8 +20,8 @@ const Home = () => {
       <div className="image-container">
         <img src={myImage} alt="AI Visual" className="photo" />
         <div className="text-content">
-          <h2>Başlik</h2>
-          <p>Bu, fotoğrafın sol tarafında duran bir metin örneğidir.asgagadgsdfhdbznrg</p>
+          <h2>Our Vision</h2>
+          <p>Are you passionate about artificial intelligence? At the AI Club, we are here to explore cutting-edge technologies, develop innovative projects, and provide opportunities that will make a difference in your career. Through workshops, competitions, and collaborative projects, we focus on fostering both personal growth and teamwork. Join us and let's shape the future together!</p>
         </div>
       </div>
 
@@ -70,43 +73,43 @@ const Home = () => {
           </div>
         </a>
         <a
-          href="https://www.linkedin.com/in/lokman-bekit-aa2ba421b/?trk=public_profile_browsemap"
+          href="https://www.linkedin.com/in/anil-mumbuc-046842225/"
           target="_blank"
           rel="noopener noreferrer"
           className="profile-link"
         >
           <div className="profile">
-            <img src={profile3} alt="Profile 3" className="profile-photo" />
-            <h3 className="profile-name">Lokman Bekit</h3>
-            <p className="profile-role">President</p>
+            <img src={Anil} alt="Profile 4" className="profile-photo" />
+            <h3 className="profile-name">Anil Mumbuc</h3>
+            <p className="profile-role">Treasurer</p>
           </div>
         </a>
         <a
-          href="https://www.linkedin.com/in/lokman-bekit-aa2ba421b/?trk=public_profile_browsemap"
+          href="https://www.linkedin.com/in/harun-karduz-274b77252/"
           target="_blank"
           rel="noopener noreferrer"
           className="profile-link"
         >
           <div className="profile">
-            <img src={profile3} alt="Profile 3" className="profile-photo" />
-            <h3 className="profile-name">Lokman Bekit</h3>
-            <p className="profile-role">President</p>
+            <img src={Harun} alt="Profile 5" className="profile-photo" />
+            <h3 className="profile-name">Harun Karduz</h3>
+            <p className="profile-role">Secretary</p>
           </div>
         </a>
         <a
-          href="https://www.linkedin.com/in/lokman-bekit-aa2ba421b/?trk=public_profile_browsemap"
+          href="https://www.linkedin.com/in/yasinyilmaz/"
           target="_blank"
           rel="noopener noreferrer"
           className="profile-link"
         >
           <div className="profile">
-            <img src={profile3} alt="Profile 3" className="profile-photo" />
-            <h3 className="profile-name">Lokman Bekit</h3>
-            <p className="profile-role">President</p>
+            <img src={Yasin} alt="Profile 6" className="profile-photo" />
+            <h3 className="profile-name">Yasin Yilmaz</h3>
+            <p className="profile-role">Advisor</p>
           </div>
         </a>
         <a
-          href="https://www.linkedin.com/in/lokman-bekit-aa2ba421b/?trk=public_profile_browsemap"
+          href="https://www.linkedin.com/in/lPokman-bekit-aa2ba421b/?trk=public_profile_browsemap"
           target="_blank"
           rel="noopener noreferrer"
           className="profile-link"

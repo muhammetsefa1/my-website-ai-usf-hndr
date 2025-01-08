@@ -65,10 +65,26 @@ body {
 }
 
 .text-content {
-  text-align: left; /* Metni sola hizala */
+  text-align: center; /* Metni sola hizala */
   font-size: 18px;
-  color: white;
+  color: rgba(255, 255, 255, 0.636);  
   max-width: 40%;
+  font-style: sans-serif;
+}
+.text-content p {
+  line-height: 1.8; /* Satır aralığını artırır */
+  margin-bottom: 16px; /* Paragraflar arasında boşluk */
+  color: rgba(255, 255, 255, 0.537); /* Metin rengi */
+}
+.text-content h2 {
+  text-align: center;
+  font-size: 30px; /* Başlık boyutu */
+  font-weight: bold; /* Daha vurgulu görünüm */
+  margin-bottom: 16px; /* Metinden biraz boşluk bırak */
+  color: #ffffff; /* Başlık rengi */
+  background: linear-gradient(90deg, #7654ff, #ff4747); /* Renk geçişi */
+  -webkit-background-clip: text; /* Arka planı metne uygular */
+  -webkit-text-fill-color: transparent; /* Metni şeffaf yapar */
 }
 
 .gray-section2 {
@@ -85,7 +101,7 @@ body {
 .gray-section {
   background-color: #f0f0f05a; /* Gri renk */
   position: flex; /* Konumu tam kontrol etmek için */
-  bottom: 0px; /* Sayfanın üstünden 500px aşağıdan başlar */
+  margin-bottom: 0%; /* Sayfanın üstünden 500px aşağıdan başlar */
   height: 80px; /* 800px - 500px = 300px yüksekliği kaplar */
   width: 100%; /* Sayfanın genişliğini tam kaplar */
   text-align: center; /* İçerikleri ortala */

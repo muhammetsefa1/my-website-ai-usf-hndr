@@ -16,12 +16,31 @@ body {
   html {
     scroll-behavior: smooth;
   }
+  /* Kaydırma çubuğunun genel stilini düzenler */
+::-webkit-scrollbar {
   
-  @media (max-width: 768px) {
-    .body {
-      height: 650vh;
-    }
+  background-color: #f5f5f543; /* Arka plan rengi */
+}
+
+/* Kaydırma çubuğunun kaydırılabilir kısmı */
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff2a; /* Kaydırma çubuğunun rengi */
+  
+}
+
+/* Kaydırma çubuğunun hover (üzerine gelindiğinde) durumu */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff55; /* Daha koyu mavi ton */
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: #ffffff73; /* Aktif durumda renk */
+}
+  
+@media (max-width: 768px) {
+  .body {
+    height: 650vh;
   }
+}
   
   @media (max-width: 480px) {
     .body {
