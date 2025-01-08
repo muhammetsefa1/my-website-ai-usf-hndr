@@ -11,11 +11,21 @@ import profile3 from './assets/images/profile3.jpg'
 import Anil from './assets/images/Anil.jpg'
 import Harun from './assets/images/Harun.jpg'
 import Yasin from './assets/images/Yasin.jpg'
+import Background1 from './assets/images/Background1.jpg'
+import usf_logo_new from './assets/images/usf_logo_new.png'
+import usf_logo from './assets/images/usf_logo.png'
+import usf_yazi from './assets/images/usf_yazi.png'
 const Home = () => {
   return (
     <div>
       <div className="background" id="about-section">
-        <img src={Background} alt="Back Visual" class="background"/>
+        <img src={Background1} alt="Background Visual" className="background-img" />
+
+        <div className="image-stack">
+          <img src={usf_yazi} alt="Image 1" className="stacked-image" />
+          <img src={usf_logo} alt="Image 2" className="stacked-image" />
+          <img src={usf_logo_new} alt="Image 3" className="stacked-image" />
+        </div>
       </div>
       <div className="image-container">
         <img src={myImage} alt="AI Visual" className="photo" />

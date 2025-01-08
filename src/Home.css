@@ -31,15 +31,51 @@ body {
   animation: fadeIn 2s ease-in;
 }
 
+/* Arka plan */
 .background {
   position: relative;
-  width: 100%; /* Sayfanın yatay genişliğini kaplar */
-  height: 100vh; /* Görünüm penceresi kadar yükseklik */ /* Resim yolu */
-  background-size: cover; /* Resmi ekranı kaplayacak şekilde ölçeklendirir */
-  animation: scaleUp 1s ease-in-out;
-  background-position: center; /* Resmi ortalar */
-  background-repeat: no-repeat; /* Tekrar etmez */
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
+
+/* Arka plan görseli */
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Resimlerin hizalanması */
+.image-stack {
+  position: absolute; /* Mutlak pozisyon */
+  top: 50%; /* Yatayda ortalama */
+  left: 50%; /* Dikeyde ortalama */
+  transform: translate(-50%, -50%); /* Tam ortalamak için */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Resimler arasındaki boşluk */
+  z-index: 1;
+}
+
+/* Resimler */
+.stacked-image {
+  width: 20vw; /* Genişliği viewport genişliğine göre ayarla */
+  max-width: 400px; /* Çok büyük ekranlar için maksimum boyut */
+  height: auto; /* Orantılı büyütme */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  transition: width 0.3s ease-in-out; /* Animasyon efekti */
+}
+
+
 
 
 /* Resim için özel stil */
@@ -263,6 +299,14 @@ body {
   .text-content {
     /* Metin ile resim arasına boşluk ekle */
   }
+  .stacked-image {
+    width: 40vw; /* Küçük ekranlarda daha geniş görünür */
+  }
+
+  .image-stack {
+    gap: 10px; /* Resimler arasındaki boşluk azaltılır */
+  }
+
 
   .photo {
     margin: 0 auto; /* Resmi ortala */
