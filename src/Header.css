@@ -10,7 +10,7 @@
   align-items: center; /* Dikeyde ortala */
   justify-content: space-between; /* Sol ve sağa yay */
   z-index: 1000; /* Üstte görünmesi için yüksek z-index değeri */
-}
+} 
 
 /* Logo container */
 .logo-container {
@@ -54,9 +54,72 @@
   transition: color 0.3s ease; /* Renk değişiminde geçiş animasyonu */
 }
 
-.nav-list a:hover {
-  color: #ff4081; /* Hover sırasında renk değişir */
+.nav-list .home-link {
+  background: linear-gradient(to right, #ff6161, #ffc78b); /* Turuncu tonlarında linear gradient */
+  color: transparent; /* Metin rengini şeffaf yap */
+  background-clip: text; /* Gradient'i metne uygulama */
+  -webkit-background-clip: text; /* Webkit tarayıcılar için */
+  text-decoration: none; /* Alt çizgiyi kaldır */
+  cursor: pointer;
 }
+
+.nav-list .about-link {
+  background: linear-gradient(135deg, #fbff00, #22ff00); /* Turuncu tonlarında linear gradient */
+  color: transparent; /* Metin rengini şeffaf yap */
+  background-clip: text; /* Gradient'i metne uygulama */
+  -webkit-background-clip: text; /* Webkit tarayıcılar için */
+  text-decoration: none; /* Alt çizgiyi kaldır */
+  cursor: pointer;
+}
+
+.nav-list .events-link {
+  background: linear-gradient(135deg,#00fff2, #0101ff); /* Yeşil tonlarında linear gradient */
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-list .profile-link {
+  background: linear-gradient(90deg, #8100f9, #fa00ed); /* Mavi tonlarında linear gradient */
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-decoration: none;
+  cursor: pointer;
+}
+.nav-list .join-link {
+  background: linear-gradient(to right, #ff00dd, #ff0000); /* Turuncu tonlarında linear gradient */
+  color: transparent; /* Metin rengini şeffaf yap */
+  background-clip: text; /* Gradient'i metne uygulama */
+  -webkit-background-clip: text; /* Webkit tarayıcılar için */
+  text-decoration: none; /* Alt çizgiyi kaldır */
+  cursor: pointer;
+}
+
+.nav-list .home-link:hover {
+  filter: brightness(80%); /* Daha koyu bir turuncu ve kırmızımsı ton */
+  
+}
+/* Hover sırasında renk değiştirme */
+.nav-list .about-link:hover {
+  filter: brightness(80%); /* Daha koyu bir turuncu ve kırmızımsı ton */
+  
+}
+
+.nav-list .events-link:hover {
+  filter: brightness(80%);
+}
+
+.nav-list .profile-link:hover {
+  filter: brightness(80%);
+}
+.nav-list .join-link:hover {
+  filter: brightness(80%); /* Daha koyu bir turuncu ve kırmızımsı ton */
+  
+}
+
 @media (max-width: 768px) {
   .header {
     position: fixed; /* Ekranın üst kısmında sabit durmasını sağlar */

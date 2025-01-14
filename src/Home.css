@@ -5,7 +5,7 @@ body {
   height: 100vh; /* Ekranı tamamen kaplasın */
   display: flex;
   flex-direction: column;
-  
+  animation: fadeIn 1s ease-in;
 }
 @keyframes scaleUp {
   0% {
@@ -62,13 +62,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; /* Resimler arasındaki boşluk */
+  gap: 0px; /* Resimler arasındaki boşluk */
   z-index: 1;
 }
 
 /* Resimler */
 .stacked-image {
   width: 20vw; /* Genişliği viewport genişliğine göre ayarla */
+  margin-bottom: -10px;
   max-width: 400px; /* Çok büyük ekranlar için maksimum boyut */
   height: auto; /* Orantılı büyütme */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
@@ -84,8 +85,8 @@ body {
   grid-template-columns: repeat(2, 1fr); /* İki sütun: Metin ve resim */
   justify-content: center;  /* İçerikleri yatayda hizala */
   align-items: center; /* İçerikleri dikeyde hizala */
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: 12%;
+  margin-bottom: 12%;
   max-width: 100%;
   flex-wrap: wrap;
   gap: 10%; /* Metin ve resim arasındaki boşluk */
@@ -122,46 +123,83 @@ body {
   -webkit-background-clip: text; /* Arka planı metne uygular */
   -webkit-text-fill-color: transparent; /* Metni şeffaf yapar */
 }
+.gray-section2 h2 {
+  font-size: 2.5rem; /* Başlık boyutu */
+  font-weight: bold; /* Kalın yazı tipi */
+  color: #333; /* Koyu gri renk */
+  text-transform: uppercase; /* Büyük harf yap */
+  letter-spacing: 2px; /* Harfler arasındaki boşluk */
+  margin-bottom: 20px; /* Alt boşluk */
+  text-align: center; /* Ortala */
+  background: linear-gradient(90deg, #7654ff, #ff4747); /* Renk geçişi */
+  -webkit-background-clip: text; /* Sadece yazıya renk uygula */
+  -webkit-text-fill-color: transparent; /* Yazıyı şeffaf yap */
+}
 
 .gray-section2 {
-  background-color: #b2a6a64e; /* Gri renk */
-  position: flex; /* Konumu tam kontrol etmek için */
-  bottom: 25%; /* Sayfanın üstünden 500px aşağıdan başlar */
-  height: 500px; /* 800px - 500px = 300px yüksekliği kaplar */
+  background-color: #b2a6a670; /* Gri renk */
+  height: auto; /* Yükseklik otomatik */
   width: 100%; /* Sayfanın genişliğini tam kaplar */
-  text-align: center; /* İçerikleri ortala */
+  text-align: center; /* Başlığı ortala */
   display: flex;
+  flex-direction: column; /* Kutuları alt alta yerleştir */
   align-items: center; /* Dikey hizalama */
   justify-content: center; /* Yatay hizalama */
-}
-.gray-section {
-  background-color: #f0f0f05a; /* Gri renk */
-  position: flex; /* Konumu tam kontrol etmek için */
-  margin-bottom: 0%; /* Sayfanın üstünden 500px aşağıdan başlar */
-  height: 80px; /* 800px - 500px = 300px yüksekliği kaplar */
-  width: 100%; /* Sayfanın genişliğini tam kaplar */
-  text-align: center; /* İçerikleri ortala */
-  display: flex;
-  align-items: center; /* Dikey hizalama */
-  justify-content: center; /* Yatay hizalama */
+  padding-bottom: 100px;
+  padding-top: 50px; /* İçerik için üst, alt, sağ ve sol boşluk */
+  margin-bottom: 50px; /* Gri alanın altında boşluk bırak */
 }
 
-.eklenen-yazı {
-  position: absolute;
-  width: 900px;
-  top: 900px;
-  left: 300px;
-  font-size: 1,5rem;
-  color: #dddddd;
- }
+
+.boxes-container {
+  display: flex;
+  flex-wrap: wrap; /* Kutular küçük ekranlarda alt alta geçer */
+  justify-content: center; /* Kutuları yatayda ortala */
+  gap: 20px; /* Kutular arasındaki boşluk */
+  margin-top: 20px;
+}
+
+.box {
+  border: 2px solid black; /* Siyah çerçeve */
+  border-radius: 10px; /* Köşeleri yuvarlat */
+  padding: 20px;
+  width: 350px; /* Kutuların genişliği */
+  height: auto; /* İçeriğe göre yükseklik */
+  text-align: left; /* Metni sola hizala */
+  background-color: transparent; /* Arka plan rengini kaldır */
+}
+
+.box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #000000; /* Başlık rengi */
+}
+
+.box p {
+  font-size: 1.2rem;
+  color: #000000; /* Metin rengi */
+}
+
+.title-members {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10%;
+  color: #333;
+  background: linear-gradient(90deg, #FF5733, #C70039);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+  
  /*profil fotoğrafları için container */ 
  .profile-container {
   display: grid; /* Grid kullanımı */
   grid-template-columns: repeat(4, 1fr); /* Sabit 4 sütun */
   justify-content: center; /* Fotoğrafları yatayda ortala */
   align-items: center;
-  gap: 10%; /* Fotoğraflar arası boşluk */
-  margin-top: 80%; /* Üst boşluk */
+  gap: 5%; /* Fotoğraflar arası boşluk */
+  margin-top: 8%; /* Üst boşluk */
   margin-left: 100px;
   margin-right: 100px;
   padding: 0px; /* Üst, alt, sağ ve sol boşluk */
@@ -183,8 +221,8 @@ body {
 
 /* Her bir profil fotoğrafı */
 .profile-photo {
-  width: 100px; /* Fotoğraf genişliği */
-  height: 100px; /* Fotoğraf yüksekliği */
+  width: 110px; /* Fotoğraf genişliği */
+  height: 110px; /* Fotoğraf yüksekliği */
   border-radius: 50%; /* Yuvarlak hale getirme */
   object-fit: cover; /* Fotoğrafın içeriğini düzgün kes */
   margin-bottom: 10px;
@@ -219,6 +257,17 @@ body {
   color: lightgray; /* Hover sırasında metin rengini değiştir */
 }
 
+.gray-section {
+  background-color: #f0f0f05a; /* Gri renk */
+  position: flex; /* Konumu tam kontrol etmek için */
+  margin-bottom: 0%; /* Sayfanın üstünden 500px aşağıdan başlar */
+  height: 80px; /* 800px - 500px = 300px yüksekliği kaplar */
+  width: 100%; /* Sayfanın genişliğini tam kaplar */
+  text-align: center; /* İçerikleri ortala */
+  display: flex;
+  align-items: center; /* Dikey hizalama */
+  justify-content: center; /* Yatay hizalama */
+}
 
 .social-container {
   display: grid;
@@ -244,7 +293,8 @@ body {
 .form-link-container {
   text-align: center;
   color: white;
-  margin: 1% 0; /* Yükseklik ve genişlik oranında margin */
+  margin-top: 15%;
+  margin-bottom: 15%;
   padding: 1% 10%; /* Yüzde birimleri ile padding */
   background-color: #000000;
   border-radius: 8px;
@@ -252,13 +302,13 @@ body {
 }
 
 .form-link-container h2 {
-  margin-bottom: 1%;
-  font-size: 1vw; /* Ekran genişliğine göre font büyüklüğü */
+  margin-bottom: 2%;
+  font-size: 3vw; /* Ekran genişliğine göre font büyüklüğü */
 }
 
 .form-link-container p {
-  margin-bottom: 1%;
-  font-size: 1vw; /* Ekran genişliğine göre font büyüklüğü */
+  margin-bottom: 2%;
+  font-size: 1.2vw; /* Ekran genişliğine göre font büyüklüğü */
 }
 
 .form-button {
@@ -285,7 +335,8 @@ body {
 /* Sayfa küçüldüğünde düzen bozulmasın */
 @media (max-width: 768px) {
   .profile-container {
-    grid-template-columns: repeat(2, 1fr);  /* Küçük ekranlarda 2 sütun */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 0%; /* Küçük ekranlarda 2 sütun */
   }
   .profile-photo {
     width: 80px; /* Fotoğraf genişliği */
@@ -297,7 +348,8 @@ body {
     gap: 20px; /* Metin ve resim arasındaki boşluğu küçült */
   }
   .text-content {
-    /* Metin ile resim arasına boşluk ekle */
+    font-size: 14px;
+    max-width: 80%;/* Metin ile resim arasına boşluk ekle */
   }
   .stacked-image {
     width: 40vw; /* Küçük ekranlarda daha geniş görünür */
@@ -307,18 +359,25 @@ body {
     gap: 10px; /* Resimler arasındaki boşluk azaltılır */
   }
 
-
   .photo {
     margin: 0 auto; /* Resmi ortala */
     width: 300px;
     height: 250px;
 
   }
+  .gray-section {
+    height: 60px; /* 800px - 500px = 300px yüksekliği kaplar */
+  }
+  .social-logo {
+    width: 30px; /* Logo genişliği */
+    height: 30px; /* Logo yüksekliği */
+  }
 }
 
 @media (max-width: 480px) {
   .profile-container {
     grid-template-columns: 1fr; /* Daha küçük ekranlarda 1 sütun */
+    gap: 0%;
   }
   .profile-photo {
     width: 50px; /* Fotoğraf genişliği */

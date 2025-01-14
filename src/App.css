@@ -2,7 +2,7 @@
 body {
     
     padding: 0;
-    height: 370vh;
+    height: auto;
     background: #000000; /* Sayfanın arka planını siyah yapıyoruz */
   }
   
@@ -38,16 +38,18 @@ body {
   
 @media (max-width: 768px) {
   .body {
-    height: 650vh;
+    height: auto;
   }
 }
   
   @media (max-width: 480px) {
     .body {
-      height: 650vh;
+      height: auto;
     }
   }
   /* Geçiş efekti ekliyoruz */
  
   
-  
+  <div className="title-members" id = "profile-section">
+        <h2>Meet Our Members</h2>
+      </div>

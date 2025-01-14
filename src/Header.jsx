@@ -12,24 +12,63 @@ const Header = () => {
         </a>
       </div>
       <nav>
-        <ul className="nav-list">
-          <li>
-            <Link to="about-section" smooth={true} duration={300}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="events-section" smooth={true} duration={300}>
-              Events
-            </Link>
-          </li>
-          <li>
-            <Link to="profile-section" smooth={true} duration={300}>
-              Profile
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <ul className="nav-list">
+        <li>
+          <Link
+            to="home-section"
+            smooth={true}
+            duration={300}
+            className="home-link"
+          >
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="about-section"
+            smooth={true}
+            duration={300}
+            offset={-120}
+            className="about-link"
+          >
+            About
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="events-section"
+            smooth={true}
+            duration={300}
+            offset = {-70}
+            className="events-link"
+          >
+            Innovations
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="profile-section"
+            smooth={true}
+            duration={300}
+            offset={-50}
+            className="profile-link"
+          >
+            Profile
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="join-section"
+            smooth={true}
+            duration={300}
+            className="join-link"
+          >
+            Join
+          </Link>
+        </li>
+      </ul>
+    </nav>
+
     </header>
   );
 };
