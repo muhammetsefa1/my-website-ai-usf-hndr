@@ -15,6 +15,8 @@ import Background1 from './assets/images/Background1.jpg'
 import usf_logo_new from './assets/images/usf_logo_new.png'
 import usf_logo from './assets/images/usf_logo.png'
 import usf_yazi from './assets/images/usf_yazi.png'
+import Juan from './assets/images/Juan.jpg'
+
 const Home = () => {
   return (
     <div>
@@ -38,38 +40,27 @@ const Home = () => {
 
       <div className="gray-section2" id="events-section">
         <h2>AI Club Innovations</h2>
+        <div className="boxes-container">
+          <div className="box">
+            <h3>Innovative Projects</h3>
+            <p>At our event, you'll have the opportunity to engage in cutting-edge projects that push the boundaries of creativity and technology. Whether you're working with the latest advancements in AI, robotics, or sustainable solutions, these projects are designed to challenge you, inspire innovative thinking, and provide real-world applications to your skills. Collaborate with peers, industry professionals, and mentors to bring your ideas to life, and gain hands-on experience that will set you apart in your field.</p>
+          </div>
+          <div className="box">
+            <h3>Interactive Workshops</h3>
+            <p>Participate in engaging workshops and events. Stay updated with the latest AI trends and technologies.</p>
+          </div>
+          <div className="box">
+            <h3>Expand Your Network</h3>
+            <p>Networking is one of the most valuable aspects of any professional event, and ours is no exception. With a diverse group of attendees from various industries and backgrounds, you'll have the chance to connect with like-minded individuals, potential collaborators, and industry leaders. Whether through informal meetups, collaborative projects, or networking sessions, this is the perfect opportunity to build lasting relationships, share ideas, and open doors to new career or business opportunities.</p>
+          </div>
+        </div>
       </div>
+
       
       
 
       {/* Profil fotoğraflarının altına isim ve çalışma alanı eklemek */}
       <div className="profile-container" id="profile-section">
-        <a
-          href="https://www.linkedin.com/in/mustafa-hundur"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="profile-link"
-        >
-          <div className="profile">
-            <img src={profile1} alt="Profile 1" className="profile-photo" />
-            <h3 className="profile-name">Mustafa Hündür</h3>
-            <p className="profile-role">Web Developer</p>
-          </div>
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/muhammet-sefa-hundur/?locale=en_US"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="profile-link"
-        >
-          <div className="profile">
-            <img src={profile2} alt="Profile 2" className="profile-photo" />
-            <h3 className="profile-name">Muhammet Hündür</h3>
-            <p className="profile-role">Project Manager</p>
-          </div>
-        </a>
-
         <a
           href="https://www.linkedin.com/in/lokman-bekit-aa2ba421b/?trk=public_profile_browsemap"
           target="_blank"
@@ -119,29 +110,42 @@ const Home = () => {
           </div>
         </a>
         <a
-          href="https://www.linkedin.com/in/lPokman-bekit-aa2ba421b/?trk=public_profile_browsemap"
+          href="https://www.linkedin.com/in/juansebastiancaballero/"
           target="_blank"
           rel="noopener noreferrer"
           className="profile-link"
         >
           <div className="profile">
-            <img src={profile3} alt="Profile 3" className="profile-photo" />
-            <h3 className="profile-name">Lokman Bekit</h3>
-            <p className="profile-role">President</p>
+            <img src={Juan} alt="Profile 3" className="profile-photo" />
+            <h3 className="profile-name">Juan Caballero Roa</h3>
+            <p className="profile-role">Officer</p>
           </div>
         </a>
         <a
-          href="https://www.linkedin.com/in/lokman-bekit-aa2ba421b/?trk=public_profile_browsemap"
+          href="https://www.linkedin.com/in/mustafa-hundur"
           target="_blank"
           rel="noopener noreferrer"
           className="profile-link"
         >
           <div className="profile">
-            <img src={profile3} alt="Profile 3" className="profile-photo" />
-            <h3 className="profile-name">Lokman Bekit</h3>
-            <p className="profile-role">President</p>
+            <img src={profile1} alt="Profile 1" className="profile-photo" />
+            <h3 className="profile-name">Mustafa Hündür</h3>
+            <p className="profile-role">Web Developer</p>
           </div>
         </a>
+        <a
+          href="https://www.linkedin.com/in/muhammet-sefa-hundur/?locale=en_US"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="profile-link"
+        >
+          <div className="profile">
+            <img src={profile2} alt="Profile 2" className="profile-photo" />
+            <h3 className="profile-name">Muhammet Hündür</h3>
+            <p className="profile-role">Project Manager</p>
+          </div>
+        </a>
+        
         
       </div>
         <div className="form-link-container">
@@ -157,9 +161,6 @@ const Home = () => {
           </a>
         </div>
 
-      <div>
-      
-      </div>
       <div class="gray-section">
         <div className="social-container">
           <a href="https://www.instagram.com/taic.usf/" target="_blank" rel="noopener noreferrer">
