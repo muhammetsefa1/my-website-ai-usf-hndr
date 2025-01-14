@@ -85,8 +85,8 @@ body {
   grid-template-columns: repeat(2, 1fr); /* İki sütun: Metin ve resim */
   justify-content: center;  /* İçerikleri yatayda hizala */
   align-items: center; /* İçerikleri dikeyde hizala */
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: 12%;
+  margin-bottom: 12%;
   max-width: 100%;
   flex-wrap: wrap;
   gap: 10%; /* Metin ve resim arasındaki boşluk */
@@ -138,15 +138,18 @@ body {
 
 .gray-section2 {
   background-color: #b2a6a670; /* Gri renk */
-  height: auto; /* Bölüm yüksekliği */
+  height: auto; /* Yükseklik otomatik */
   width: 100%; /* Sayfanın genişliğini tam kaplar */
   text-align: center; /* Başlığı ortala */
   display: flex;
   flex-direction: column; /* Kutuları alt alta yerleştir */
   align-items: center; /* Dikey hizalama */
   justify-content: center; /* Yatay hizalama */
-  padding: 20px;
+  padding-bottom: 100px;
+  padding-top: 50px; /* İçerik için üst, alt, sağ ve sol boşluk */
+  margin-bottom: 50px; /* Gri alanın altında boşluk bırak */
 }
+
 
 .boxes-container {
   display: flex;
@@ -177,15 +180,18 @@ body {
   color: #000000; /* Metin rengi */
 }
 
+.title-members {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10%;
+  color: #333;
+  background: linear-gradient(90deg, #FF5733, #C70039);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-.eklenen-yazı {
-  position: absolute;
-  width: 900px;
-  top: 900px;
-  left: 300px;
-  font-size: 1,5rem;
-  color: #dddddd;
- }
+  
  /*profil fotoğrafları için container */ 
  .profile-container {
   display: grid; /* Grid kullanımı */
@@ -193,7 +199,7 @@ body {
   justify-content: center; /* Fotoğrafları yatayda ortala */
   align-items: center;
   gap: 5%; /* Fotoğraflar arası boşluk */
-  margin-top: 15%; /* Üst boşluk */
+  margin-top: 8%; /* Üst boşluk */
   margin-left: 100px;
   margin-right: 100px;
   padding: 0px; /* Üst, alt, sağ ve sol boşluk */
@@ -215,8 +221,8 @@ body {
 
 /* Her bir profil fotoğrafı */
 .profile-photo {
-  width: 100px; /* Fotoğraf genişliği */
-  height: 100px; /* Fotoğraf yüksekliği */
+  width: 110px; /* Fotoğraf genişliği */
+  height: 110px; /* Fotoğraf yüksekliği */
   border-radius: 50%; /* Yuvarlak hale getirme */
   object-fit: cover; /* Fotoğrafın içeriğini düzgün kes */
   margin-bottom: 10px;

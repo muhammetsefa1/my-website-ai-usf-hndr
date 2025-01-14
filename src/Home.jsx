@@ -20,7 +20,7 @@ import Juan from './assets/images/Juan.jpg'
 const Home = () => {
   return (
     <div>
-      <div className="background" id="about-section">
+      <div className="background" id="home-section">
         <img src={Background1} alt="Background Visual" className="background-img" />
 
         <div className="image-stack">
@@ -29,7 +29,7 @@ const Home = () => {
           <img src={usf_logo_new} alt="Image 3" className="stacked-image" />
         </div>
       </div>
-      <div className="image-container">
+      <div className="image-container" id="about-section">
         <img src={myImage} alt="AI Visual" className="photo" />
         <div className="text-content">
           <h2>Our Vision</h2>
@@ -38,29 +38,37 @@ const Home = () => {
       </div>
 
 
-      <div className="gray-section2" id="events-section">
+      <div className="gray-section2" id="events-section"> 
         <h2>AI Club Innovations</h2>
         <div className="boxes-container">
           <div className="box">
-            <h3>Innovative Projects</h3>
-            <p>At our event, you'll have the opportunity to engage in cutting-edge projects that push the boundaries of creativity and technology. Whether you're working with the latest advancements in AI, robotics, or sustainable solutions, these projects are designed to challenge you, inspire innovative thinking, and provide real-world applications to your skills. Collaborate with peers, industry professionals, and mentors to bring your ideas to life, and gain hands-on experience that will set you apart in your field.</p>
+            <h3 className="title-projects">Innovative Projects</h3>
+            <p>Dive into cutting-edge projects that redefine the boundaries of technology and innovation. 
+            Whether it’s developing AI-powered applications, exploring advanced robotics, or crafting sustainable solutions, 
+            you'll have the chance to bring bold ideas to life. Collaborate with peers and mentors, 
+            gain hands-on experience, and create projects that make a meaningful impact.</p>
           </div>
           <div className="box">
-            <h3>Interactive Workshops</h3>
-            <p>Participate in engaging workshops and events. Stay updated with the latest AI trends and technologies.</p>
+            <h3 className="title-workshops">Interactive Workshops</h3>
+            <p>Join our engaging workshops designed to enhance your skills and deepen your understanding of AI and related technologies. 
+            Learn directly from industry experts, tackle real-world challenges, and stay ahead of emerging trends. 
+            From coding bootcamps to design sprints, there’s something for everyone.</p>
           </div>
           <div className="box">
-            <h3>Expand Your Network</h3>
-            <p>Networking is one of the most valuable aspects of any professional event, and ours is no exception. With a diverse group of attendees from various industries and backgrounds, you'll have the chance to connect with like-minded individuals, potential collaborators, and industry leaders. Whether through informal meetups, collaborative projects, or networking sessions, this is the perfect opportunity to build lasting relationships, share ideas, and open doors to new career or business opportunities.</p>
+            <h3 className="title-network">Expand Your Network</h3>
+            <p>Build meaningful connections with professionals, students, and experts who share your passion for innovation. 
+            Our events foster collaboration and idea exchange, creating opportunities to meet potential collaborators, 
+            mentors, or even future employers. Your next big opportunity might be just one conversation away.
+            </p>
           </div>
         </div>
       </div>
 
+      <div className="title-members" id = "profile-section">
+        <h2>EXECUTIVE MEMBERS</h2>
+      </div>
       
-      
-
-      {/* Profil fotoğraflarının altına isim ve çalışma alanı eklemek */}
-      <div className="profile-container" id="profile-section">
+      <div className="profile-container" id="profile-section2">
         <a
           href="https://www.linkedin.com/in/lokman-bekit-aa2ba421b/?trk=public_profile_browsemap"
           target="_blank"
@@ -145,9 +153,8 @@ const Home = () => {
             <p className="profile-role">Project Manager</p>
           </div>
         </a>
-        
-        
       </div>
+
         <div className="form-link-container">
           <h2>Join Our Club</h2>
           <p>Fill out our membership form by clicking the button below:</p>
@@ -161,7 +168,7 @@ const Home = () => {
           </a>
         </div>
 
-      <div class="gray-section">
+      <div class="gray-section" id="join-section">
         <div className="social-container">
           <a href="https://www.instagram.com/taic.usf/" target="_blank" rel="noopener noreferrer">
             <img src={instagramLogo} alt="Instagram Logo" className="social-logo" />
